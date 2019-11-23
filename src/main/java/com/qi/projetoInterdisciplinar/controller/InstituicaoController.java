@@ -2,7 +2,7 @@ package com.qi.projetoInterdisciplinar.controller;
 
 import javax.validation.Valid;
 
-import com.qi.projetoInterdisciplinar.service.PostService;
+import com.qi.projetoInterdisciplinar.service.InstituicaoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -17,7 +17,7 @@ import com.qi.projetoInterdisciplinar.model.Instituicao;
 public class InstituicaoController {
 
     @Autowired
-    private PostService service; //	Injeta a classe de serviços
+    private InstituicaoService service; //	Injeta a classe de serviços
 
     //Vai para tela principal do CRUD aonde são listados todos os posts
     @GetMapping("/")

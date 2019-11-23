@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.qi.projetoInterdisciplinar.model.Instituicao;
 
 @Service //Define a classe como um bean do Spring
-public class PostService {
+public class InstituicaoService {
 
     @Autowired
     private InstituicaoRepository repository; //Injeta o repositório
