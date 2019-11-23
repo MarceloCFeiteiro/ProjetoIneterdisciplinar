@@ -1,35 +1,35 @@
-package com.matera.blog.service;
+package com.qi.projetoInterdisciplinar.service;
 
 import java.util.List;
 import java.util.Optional;
 
+import com.qi.projetoInterdisciplinar.repository.InstituicaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.matera.blog.model.Post;
-import com.matera.blog.repository.PostRepository;
+import com.qi.projetoInterdisciplinar.model.Instituicao;
 
 @Service //Define a classe como um bean do Spring
 public class PostService {
 
     @Autowired
-    private PostRepository repository; //Injeta o repositório
+    private InstituicaoRepository repository; //Injeta o repositório
 
     //Retorna uma lista com todos posts inseridos
-    public List<Post> findAll() {
+    public List<Instituicao> findAll() {
         return repository.findAll();
     }
 
     //Retorno um post a partir do ID
-    public Post findOne(Long id) {
+    public Instituicao findOne(Long id) {
 
-        Optional<Post> byId = repository.findById(id);
+        Optional<Instituicao> byId = repository.findById(id);
 
-        return byId.isPresent() ? byId.get() : new Post();
+        return byId.isPresent() ? byId.get() : new Instituicao();
     }
 
     //Salva ou atualiza um post
-    public Post save(Post post) {
+    public Instituicao save(Instituicao post) {
         return repository.saveAndFlush(post);
     }
 

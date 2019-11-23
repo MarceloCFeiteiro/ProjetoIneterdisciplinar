@@ -1,4 +1,4 @@
-package com.matera.blog;
+package com.qi.projetoInterdisciplinar;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

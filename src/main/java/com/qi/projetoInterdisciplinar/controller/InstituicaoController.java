@@ -1,7 +1,8 @@
-package com.matera.blog.controller;
+package com.qi.projetoInterdisciplinar.controller;
 
 import javax.validation.Valid;
 
+import com.qi.projetoInterdisciplinar.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -10,11 +11,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.matera.blog.model.Post;
-import com.matera.blog.service.PostService;
+import com.qi.projetoInterdisciplinar.model.Instituicao;
 
 @Controller //Define a classe como um bean do Spring
-public class PostController {
+public class InstituicaoController {
 
     @Autowired
     private PostService service; //	Injeta a classe de serviços
@@ -31,7 +31,7 @@ public class PostController {
 
     //Vai para tela de adição de post
     @GetMapping("/add")
-    public ModelAndView add(Post post) {
+    public ModelAndView add(Instituicao post) {
 
         ModelAndView mv = new ModelAndView("/postAdd");
         mv.addObject("post", post);
@@ -59,7 +59,7 @@ public class PostController {
     //Se tudo estiver ok, salva e volta para tela principal
     //Se houver erro, retorna para tela atual exibindo as mensagens de erro
     @PostMapping("/save")
-    public ModelAndView save(@Valid Post post, BindingResult result) {
+    public ModelAndView save(@Valid Instituicao post, BindingResult result) {
 
         if(result.hasErrors()) {
             return add(post);
