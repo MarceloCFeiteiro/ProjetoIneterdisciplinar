@@ -9,18 +9,16 @@ import org.springframework.stereotype.Service;
 
 import com.qi.projetoInterdisciplinar.model.Instituicao;
 
-@Service //Define a classe como um bean do Spring
+@Service
 public class InstituicaoService {
 
     @Autowired
     private InstituicaoRepository repository; //Injeta o repositório
 
-    //Retorna uma lista com todos posts inseridos
     public List<Instituicao> findAll() {
         return repository.findAll();
     }
 
-    //Retorno um post a partir do ID
     public Instituicao findOne(Long id) {
 
         Optional<Instituicao> byId = repository.findById(id);
@@ -28,12 +26,10 @@ public class InstituicaoService {
         return byId.isPresent() ? byId.get() : new Instituicao();
     }
 
-    //Salva ou atualiza um post
-    public Instituicao save(Instituicao post) {
-        return repository.saveAndFlush(post);
+    public Instituicao save(Instituicao instituicao) {
+        return repository.saveAndFlush(instituicao);
     }
 
-    //Exclui um post
     public void delete(Long id) {
         repository.deleteById(id);
     }
