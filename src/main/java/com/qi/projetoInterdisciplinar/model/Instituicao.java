@@ -36,8 +36,8 @@ public class Instituicao implements Serializable {
     private String email;
 
     @Column(nullable = false)
-  //  @Temporal(TemporalType.DATE)
-  //  @DateTimeFormat(pattern = "yyyy-MM-dd")
+    //  @Temporal(TemporalType.DATE)
+    //  @DateTimeFormat(pattern = "yyyy-MM-dd")
     @NotNull(message = "Telefone é uma informação obrigatória.")
     private String telefone;
 
