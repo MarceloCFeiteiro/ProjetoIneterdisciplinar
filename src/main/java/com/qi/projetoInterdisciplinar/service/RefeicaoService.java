@@ -1,6 +1,5 @@
 package com.qi.projetoInterdisciplinar.service;
 
-import com.qi.projetoInterdisciplinar.model.Instituicao;
 import com.qi.projetoInterdisciplinar.model.Refeicao;
 import com.qi.projetoInterdisciplinar.repository.RefeicaoRepository;
 import org.springframework.stereotype.Service;
