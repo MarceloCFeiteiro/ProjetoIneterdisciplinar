@@ -1,6 +1,5 @@
 package com.qi.projetoInterdisciplinar.controller;
 
-import com.qi.projetoInterdisciplinar.model.Instituicao;
 import com.qi.projetoInterdisciplinar.model.Refeicao;
 import com.qi.projetoInterdisciplinar.service.RefeicaoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ public class RefeicaoController {
     private RefeicaoService refeicaoService;
 
     //Vai para tela principal do CRUD aonde são listados todas as refeicões
-    @GetMapping("/")
+    @GetMapping("/refeicao")
     public ModelAndView findAll() {
 
         ModelAndView mv = new ModelAndView("/refeicao");
@@ -30,7 +29,7 @@ public class RefeicaoController {
     }
 
     //Vai para tela de adição de refeicao
-    @GetMapping("/add")
+    @GetMapping("/addrefeicao")
     public ModelAndView add(Refeicao refeicao) {
 
         ModelAndView mv = new ModelAndView("/refeicaoAdd");
@@ -40,14 +39,14 @@ public class RefeicaoController {
     }
 
     //Vai para tela de edição de refeicao (mesma tela de adição, contudo é enviado para a view um objeto que já existe)
-    @GetMapping("/edit/{id}")
+    @GetMapping("/editrefeicao/{id}")
     public ModelAndView edit(@PathVariable("id") Long id) {
 
         return add(refeicaoService.findOne(id));
     }
 
     //Exclui um refeicao por seu ID e redireciona para a tela principal
-    @GetMapping("/delete/{id}")
+    @GetMapping("/deleterefeicao/{id}")
     public ModelAndView delete(@PathVariable("id") Long id) {
 
         //refeicaoService.delete(id);
@@ -58,7 +57,7 @@ public class RefeicaoController {
     //Recebe um objeto preenchido do Thymeleaf e valida
     //Se tudo estiver ok, salva e volta para tela principal
     //Se houver erro, retorna para tela atual exibindo as mensagens de erro
-    @PostMapping("/save")
+    @PostMapping("/saverefeicao")
     public ModelAndView save(@Valid Refeicao refeicao, BindingResult result) {
 
         if(result.hasErrors()) {

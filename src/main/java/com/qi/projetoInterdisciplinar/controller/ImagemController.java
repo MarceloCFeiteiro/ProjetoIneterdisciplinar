@@ -17,7 +17,7 @@ public class ImagemController {
     private ImagemService imagemService;
 
     //Vai para tela principal do CRUD aonde são listados todas as instituições
-    @GetMapping("/")
+    @GetMapping("/imagem")
     public ModelAndView findAll() {
 
         ModelAndView mv = new ModelAndView("/imagem");
@@ -27,7 +27,7 @@ public class ImagemController {
     }
 
     //Vai para tela de adição de imagem
-    @GetMapping("/add")
+    @GetMapping("/addImagem")
     public ModelAndView add(Imagem imagem) {
 
         ModelAndView mv = new ModelAndView("/imagemAdd");
@@ -37,14 +37,14 @@ public class ImagemController {
     }
 
     //Vai para tela de edição de imagens (mesma tela de adição, contudo é enviado para a view um objeto que já existe)
-    @GetMapping("/edit/{id}")
+    @GetMapping("/editImagem/{id}")
     public ModelAndView edit(@PathVariable("id") Long id) {
 
         return add(imagemService.findOne(id));
     }
 
     //Exclui um imagem por seu ID e redireciona para a tela principal
-    @GetMapping("/delete/{id}")
+    @GetMapping("/deleteImagem/{id}")
     public ModelAndView delete(@PathVariable("id") Long id) {
 
 //        imagemService.delete(id);
@@ -55,7 +55,7 @@ public class ImagemController {
     //Recebe um objeto preenchido do Thymeleaf e valida
     //Se tudo estiver ok, salva e volta para tela principal
     //Se houver erro, retorna para tela atual exibindo as mensagens de erro
-    @PostMapping("/save")
+    @PostMapping("/saveImagem")
     public ModelAndView save(@Valid Imagem imagem, BindingResult result) {
 
         if(result.hasErrors()) {
@@ -66,5 +66,8 @@ public class ImagemController {
 
         return findAll();
     }
+
+
+
 
 }
