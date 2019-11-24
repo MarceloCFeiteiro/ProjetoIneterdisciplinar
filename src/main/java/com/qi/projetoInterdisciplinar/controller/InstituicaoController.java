@@ -29,7 +29,7 @@ public class InstituicaoController {
         return mv;
     }
 
-    //Vai para tela de adição de post
+    //Vai para tela de adição de uma isntituicao
     @GetMapping("/add")
     public ModelAndView add(Instituicao instituicao) {
 
