@@ -27,7 +27,7 @@ public class Pessoa {
 
     @Column(nullable = false)
     @NotNull(message = "Celular é uma informação obrigatória.")
-    private String Celular;
+    private String celular;
 
     public Long getId() {
         return id;
@@ -62,10 +62,10 @@ public class Pessoa {
     }
 
     public String getCelular() {
-        return Celular;
+        return celular;
     }
 
     public void setCelular(String celular) {
-        Celular = celular;
+        celular = celular;
     }
 }

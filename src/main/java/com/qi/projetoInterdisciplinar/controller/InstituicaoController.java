@@ -20,17 +20,17 @@ public class InstituicaoController {
     private InstituicaoService instituicaoService;
 
     //Vai para tela principal do CRUD aonde são listados todas as instituições
-    @GetMapping("/")
+    @GetMapping("/instituicaoList")
     public ModelAndView findAll() {
 
-        ModelAndView mv = new ModelAndView("/instituicao");
+        ModelAndView mv = new ModelAndView("/instituicaoList");
         mv.addObject("instituicoes", instituicaoService.findAll());
 
         return mv;
     }
 
     //Vai para tela de adição de uma isntituicao
-    @GetMapping("/add")
+    @GetMapping("/instituicaoAdd")
     public ModelAndView add(Instituicao instituicao) {
 
         ModelAndView mv = new ModelAndView("/instituicaoAdd");

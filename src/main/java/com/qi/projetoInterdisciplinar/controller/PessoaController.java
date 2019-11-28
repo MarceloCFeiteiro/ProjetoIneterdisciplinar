@@ -19,10 +19,10 @@ public class PessoaController {
     private PessoaService pessoaService;
 
     //Vai para tela principal do CRUD aonde são listados todas as pessoas
-    @GetMapping("/pessoa")
+    @GetMapping("/pessoaList")
     public ModelAndView findAll() {
 
-        ModelAndView mv = new ModelAndView("/pessoa");
+        ModelAndView mv = new ModelAndView("/pessoaList");
         mv.addObject("pessoas", pessoaService.findAll());
 
         return mv;

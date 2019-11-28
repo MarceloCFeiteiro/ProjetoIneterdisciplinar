@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Interdisciplinar</title>
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+    />
+</head>
+<body>
+<!--Menu-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a th:href="@{/}" class="navbar-brand">Logo</a>
+    <button
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#menu"
+            type="button"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!--Links-->
+    <div id="menu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-md-auto">
+            <li class="nav-item active">
+                <a class="nav-link" th:href="@{/}">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/instituicaoList/}">Instituição</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/clienteList/}">Cliente</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/refeicaoList/}">Cardápio</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!--Content-->
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Seja bem-vindo!</h1>
+            <p>
+                Faça parte do nosso projeto e divulgue sua instituição cadastrando
+                suas principais refeições.
+            </p>
+            <p>
+                E para você que deseja receber as refeições de nossos parceiros
+                basta cadastrar-se em nosso site .
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="display-5">Faça seu cadastro agora mesmo</h1>
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Instituição</h2>
+                <p>
+                    Cadastre sua instiuição e seja visto por milhares de clientes em
+                    nosso site
+                </p>
+                <p><a class="btn btn-primary" th:href="@{/instituicaoList/}">Cadastre-se >></a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Cliente</h2>
+                <p>
+                    Cadastre sua instiuição e seja visto por milhares de clientes em
+                    nosso site
+                </p>
+                <p><a class="btn btn-primary" th:href="@{/clienteList/}">Cadastre-se >></a></p>
+            </div>
+            <div class="col-md-4">
+                <h2>Refeições</h2>
+                <p>
+                    Cadastre sua instiuição e seja visto por milhares de clientes em
+                    nosso site
+                </p>
+                <p><a class="btn btn-primary" th:href="@{/refeicaoList/}">Cadastre-se >></a></p>
+            </div>
+        </div>
+        <hr />
+    </div>
+</main>
+
+<!--Footer-->
+<footer class="container">
+    <p>Todos os direitos reservados</p>
+
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+    ></script>
+    <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+    ></script>
+</footer>
+</body>
+</html>
