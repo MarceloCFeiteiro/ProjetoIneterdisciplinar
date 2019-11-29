@@ -29,7 +29,7 @@ public class RefeicaoController {
     }
 
     //Vai para tela de adição de refeicao
-    @GetMapping("/addrefeicao")
+    @GetMapping("/refeicaoAdd")
     public ModelAndView add(Refeicao refeicao) {
 
         ModelAndView mv = new ModelAndView("/refeicaoAdd");

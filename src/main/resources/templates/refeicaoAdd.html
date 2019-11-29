@@ -50,8 +50,8 @@
         <div class="panel-body">
             <form
                     class="form-horizontal"
-                    th:object="${post}"
-                    th:action="@{/save}"
+                    th:object="${refeicao}"
+                    th:action="@{/saverefeicao}"
                     method="POST"
                     style="margin: 10px;"
             >
@@ -98,12 +98,12 @@
                     <div class="form-group row">
                         <div
                                 class="col-md-5"
-                                th:classappend="${#fields.hasErrors('descricaoRef')}? 'has-error'"
+                                th:classappend="${#fields.hasErrors('descricao')}? 'has-error'"
                         >
                             <label>Descrição da refeição:</label>
                             <textarea
                                     class="form-control input-sm"
-                                    th:field="*{descricaoRef}"
+                                    th:field="*{descricao}"
                                     cols="4"
                                     rows="3"
                                     placeholder="Informe o texto"
@@ -138,34 +138,14 @@
                     </div>
                     <hr />
                     <h2>Imagem da Refeição</h2>
-                    <div class="form-group row">
-                        <div class="col-md-1">
-                            <label>Id:</label>
-                            <input
-                                    class="form-control input-sm"
-                                    type="number"
-                                    id="idFoto"
-                                    th:field="*{idFoto}"
-                                    readonly="readonly"
-                            />
-                        </div>
-                        <div class="col-md-2">
-                            <label>Id da refeição:</label>
-                            <input
-                                    class="form-control input-sm"
-                                    type="number"
-                                    id="idRefeicao"
-                                    th:field="*{idRefeicao}"
-                            />
-                        </div>
-                    </div>
+
                     <div class="form-group row">
                         <div class="col-md-2">
                             <label>Foto da refeição</label>
                             <img id="blah" alt="Sua imagem" width="300" height="200" />
                             <input type="file"
-                                   id="foto"
-                                   th:field="*{foto}"
+                                   id="pic"
+                                   th:field="*{pic}"
                                    onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                         </div>
                     </div>

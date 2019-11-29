@@ -33,7 +33,19 @@ public class Refeicao {
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @NotNull(message = "Data de refeição é uma informação obrigatória.")
-    private Date dataRefeição;
+    private Date dataRefeicao;
+
+    @Lob
+    @Column(nullable = false, name="pic")
+    private byte[] pic;
+
+    public byte[] getPic() {
+        return pic;
+    }
+
+    public void setPic(byte[] pic) {
+        this.pic = pic;
+    }
 
     public Long getId() {
         return id;
@@ -67,11 +79,11 @@ public class Refeicao {
         this.dataCadastro = dataCadastro;
     }
 
-    public Date getDataRefeição() {
-        return dataRefeição;
+    public Date getDataRefeicao() {
+        return dataRefeicao;
     }
 
-    public void setDataRefeição(Date dataRefeição) {
-        this.dataRefeição = dataRefeição;
+    public void setDataRefeicao(Date dataRefeicao) {
+        this.dataRefeicao = dataRefeicao;
     }
 }

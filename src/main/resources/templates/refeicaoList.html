@@ -68,8 +68,8 @@
                     <td th:text="${#dates.format(refeicao.dataCadastro, 'dd/MM/yyyy')}"></td>
                     <td>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-sm btn-primary" th:href="@{/edit/{id}(id=${refeicao.id})}">Editar</a>
-                            <a class="delete btn btn-sm btn-danger" th:href="@{/delete/{id}(id=${refeicao.id})}">Excluir</a>
+                            <a class="btn btn-sm btn-primary" th:href="@{/editrefeicao/{id}(id=${refeicao.id})}">Editar</a>
+                            <a class="delete btn btn-sm btn-danger" th:href="@{/deleterefeicao/{id}(id=${refeicao.id})}">Excluir</a>
                         </div>
                     </td>
                 </tr>
