@@ -26,7 +26,7 @@ public class Pessoa {
     private String email;
 
     @Column(nullable = false)
-    @NotNull(message = "Celular é uma informação obrigatória.")
+    @NotBlank(message = "Celular é uma informação obrigatória.")
     private String celular;
 
     public Long getId() {
@@ -66,6 +66,6 @@ public class Pessoa {
     }
 
     public void setCelular(String celular) {
-        celular = celular;
+        this.celular = celular;
     }
 }

@@ -34,7 +34,7 @@
                 <a class="nav-link" th:href="@{/instituicaoList/}">Instituição</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/clienteList/}">Cliente</a>
+                <a class="nav-link" th:href="@{/pessoaList/}">Cliente</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" th:href="@{/refeicaoList/}">Cardápio</a>
@@ -63,15 +63,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="post : ${posts}">
-                    <td th:text="${post.id}"></td>
-                    <td th:text="${post.nome}"></td>
-                    <td th:text="${post.endereco}"></td>
-                    <td th:text="${post.email}"></td>
+                <tr th:each="instituicao : ${instituicoes}">
+                    <td th:text="${instituicao.id}"></td>
+                    <td th:text="${instituicao.nome}"></td>
+                    <td th:text="${instituicao.endereco}"></td>
+                    <td th:text="${instituicao.email}"></td>
                     <td>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-sm btn-primary" th:href="@{/edit/{id}(id=${post.id})}">Editar</a>
-                            <a class="delete btn btn-sm btn-danger" th:href="@{/delete/{id}(id=${post.id})}">Excluir</a>
+                            <a class="btn btn-sm btn-primary" th:href="@{/edit/{id}(id=${instituicao.id})}">Editar</a>
+                            <a class="delete btn btn-sm btn-danger" th:href="@{/delete/{id}(id=${instituicao.id})}">Excluir</a>
                         </div>
                     </td>
                 </tr>

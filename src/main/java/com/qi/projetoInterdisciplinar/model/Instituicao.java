@@ -20,7 +20,7 @@ public class Instituicao implements Serializable {
     private Long id;
 
     @Column(nullable = false, length = 150)
-    @NotBlank(message = "Nome é uma informação obrigatória.")
+    @NotBlank(message = "Nome da instituição é uma informação obrigatória.")
     private String nome;
 
     @Column(nullable = false, length = 150)
@@ -28,13 +28,13 @@ public class Instituicao implements Serializable {
     private String endereco;
 
     @Column(nullable = false)
-    @NotBlank(message = "Email é uma informação obrigatória.")
+    @NotBlank(message = "Email da instituição é uma informação obrigatória.")
     private String email;
 
     @Column(nullable = false)
     //  @Temporal(TemporalType.DATE)
     //  @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @NotNull(message = "Telefone é uma informação obrigatória.")
+    @NotNull(message = "Telefone Instituição é uma informação obrigatória.")
     private String telefone;
 
     public static long getSerialVersionUID() {

@@ -34,7 +34,7 @@
                 <a class="nav-link" th:href="@{/instituicaoList/}">Instituição</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" th:href="@{/cliente/}">Cliente</a>
+                <a class="nav-link" th:href="@{/pessoaList/}">Cliente</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" th:href="@{/refeicaoList/}">Cardápio</a>
@@ -65,21 +65,21 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="post : ${posts}">
-                    <td th:text="${post.id}"></td>
-                    <td th:text="${post.nome}"></td>
-                    <td th:text="${post.email}"></td>
-                    <td th:text="${post.celular}"></td>
+                <tr th:each="pessoa : ${pessoas}">
+                    <td th:text="${pessoa.id}"></td>
+                    <td th:text="${pessoa.nome}"></td>
+                    <td th:text="${pessoa.email}"></td>
+                    <td th:text="${pessoa.celular}"></td>
                     <td>
                         <div class="btn-group pull-right">
                             <a
                                     class="btn btn-sm btn-primary"
-                                    th:href="@{/edit/{id}(id=${post.id})}"
+                                    th:href="@{/edit/{id}(id=${pessoa.id})}"
                             >Editar</a
                             >
                             <a
                                     class="delete btn btn-sm btn-danger"
-                                    th:href="@{/delete/{id}(id=${post.id})}"
+                                    th:href="@{/delete/{id}(id=${pessoa.id})}"
                             >Excluir</a
                             >
                         </div>
@@ -90,7 +90,7 @@
         </div>
     </div>
     <div class="panel-footer">
-        <a class="btn btn-sm btn-success" th:href="@{/clienteAdd/}">Adicionar</a>
+        <a class="btn btn-sm btn-success" th:href="@{/pessoaAdd/}">Adicionar</a>
     </div>
     <hr />
 </div>

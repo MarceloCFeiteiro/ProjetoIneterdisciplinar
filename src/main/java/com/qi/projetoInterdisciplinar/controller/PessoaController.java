@@ -29,7 +29,7 @@ public class PessoaController {
     }
 
     //Vai para tela de adição de pessoas
-    @GetMapping("/addpessoa")
+    @GetMapping("/pessoaAdd")
     public ModelAndView add(Pessoa pessoa) {
 
         ModelAndView mv = new ModelAndView("/pessoaAdd");
@@ -57,7 +57,7 @@ public class PessoaController {
     //Recebe um objeto preenchido do Thymeleaf e valida
     //Se tudo estiver ok, salva e volta para tela principal
     //Se houver erro, retorna para tela atual exibindo as mensagens de erro
-    @PostMapping("/savepessaoa")
+    @PostMapping("/savepessoa")
     public ModelAndView save(@Valid Pessoa pessoa, BindingResult result) {
 
         if(result.hasErrors()) {

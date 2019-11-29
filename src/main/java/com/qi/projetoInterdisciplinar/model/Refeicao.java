@@ -3,6 +3,7 @@ package com.qi.projetoInterdisciplinar.model;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
@@ -19,7 +20,7 @@ public class Refeicao {
 
     @Lob
     @Column(nullable = false)
-    @NotNull(message = "A Descrição  é uma informação obrigatória.")
+    @NotBlank(message = "A Descrição  é uma informação obrigatória.")
     private String descricao;
 
     @Column(nullable = false)

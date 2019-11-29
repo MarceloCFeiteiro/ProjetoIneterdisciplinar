@@ -162,11 +162,11 @@
                     <div class="form-group row">
                         <div class="col-md-2">
                             <label>Foto da refeição</label>
-                            <input
-                                    type="file"
-                                    id="fotoRefeicao"
-                                    th:field="*{fotoRefeicao}"
-                            />
+                            <img id="blah" alt="Sua imagem" width="300" height="200" />
+                            <input type="file"
+                                   id="foto"
+                                   th:field="*{foto}"
+                                   onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
                         </div>
                     </div>
                 </fieldset>

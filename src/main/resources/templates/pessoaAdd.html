@@ -34,7 +34,7 @@
                 <a class="nav-link" th:href="@{/instituicaoList/}">Instituição</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/clienteList/}">Cliente</a>
+                <a class="nav-link" th:href="@{/pessoaList/}">Cliente</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" th:href="@{/refeicaoList/}">Cardápio</a>
@@ -50,8 +50,8 @@
         <div class="panel-body">
             <form
                     class="form-horizontal"
-                    th:object="${cliente}"
-                    th:action="@{/save}"
+                    th:object="${pessoa}"
+                    th:action="@{/savepessoa}"
                     method="POST"
                     style="margin: 10px;"
             >
@@ -128,7 +128,7 @@
                             <label>Celular:</label>
                             <input
                                     class="form-control input-sm"
-                                    type="tel"
+                                    type="text"
                                     id="celular"
                                     th:field="*{celular}"
                             />
@@ -140,7 +140,7 @@
                         <button type="submit" class="btn btn-md btn-primary">
                             Salvar
                         </button>
-                        <a th:href="@{/}" class="btn btn-md btn-default">Cancelar</a>
+                        <a th:href="@{/pessoaList}" class="btn btn-md btn-default">Cancelar</a>
                     </div>
                 </div>
             </form>

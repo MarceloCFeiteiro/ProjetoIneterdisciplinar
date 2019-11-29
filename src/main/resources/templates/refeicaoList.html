@@ -34,7 +34,7 @@
                 <a class="nav-link" th:href="@{/instituicaoList/}">Instituição</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" th:href="@{/clienteList/}">Cliente</a>
+                <a class="nav-link" th:href="@{/pessoaList/}">Cliente</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" th:href="@{/refeicaoList/}">Cardápio</a>
@@ -56,22 +56,20 @@
                 <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Nome</th>
-                    <th>Endereço</th>
-                    <th>Email</th>
+                    <th>Descrição</th>
+                    <th>Data de cadastro</th>
                     <th></th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr th:each="post : ${posts}">
-                    <td th:text="${post.id}"></td>
-                    <td th:text="${post.autor}"></td>
-                    <td th:text="${post.titulo}"></td>
-                    <td th:text="${#dates.format(post.data, 'dd/MM/yyyy')}"></td>
+                <tr th:each="refeicao : ${refeicoes}">
+                    <td th:text="${refeicao.id}"></td>
+                    <td th:text="${refeicao.descricao}"></td>
+                    <td th:text="${#dates.format(refeicao.dataCadastro, 'dd/MM/yyyy')}"></td>
                     <td>
                         <div class="btn-group pull-right">
-                            <a class="btn btn-sm btn-primary" th:href="@{/edit/{id}(id=${post.id})}">Editar</a>
-                            <a class="delete btn btn-sm btn-danger" th:href="@{/delete/{id}(id=${post.id})}">Excluir</a>
+                            <a class="btn btn-sm btn-primary" th:href="@{/edit/{id}(id=${refeicao.id})}">Editar</a>
+                            <a class="delete btn btn-sm btn-danger" th:href="@{/delete/{id}(id=${refeicao.id})}">Excluir</a>
                         </div>
                     </td>
                 </tr>

@@ -2,6 +2,7 @@ package com.qi.projetoInterdisciplinar.service;
 
 import com.qi.projetoInterdisciplinar.model.Refeicao;
 import com.qi.projetoInterdisciplinar.repository.RefeicaoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,6 +11,7 @@ import java.util.Optional;
 @Service
 public class RefeicaoService {
 
+    @Autowired
     private RefeicaoRepository refeicaoRepository;
 
     public List<Refeicao> findAll() {

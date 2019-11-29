@@ -19,10 +19,10 @@ public class RefeicaoController {
     private RefeicaoService refeicaoService;
 
     //Vai para tela principal do CRUD aonde são listados todas as refeicões
-    @GetMapping("/refeicao")
+    @GetMapping("/refeicaoList")
     public ModelAndView findAll() {
 
-        ModelAndView mv = new ModelAndView("/refeicao");
+        ModelAndView mv = new ModelAndView("/refeicaoList");
         mv.addObject("refeicoes", refeicaoService.findAll());
 
         return mv;
