@@ -14,7 +14,7 @@
 <body>
 <!--Menu-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <a href="#" class="navbar-brand">Logo</a>
+    <a href="@{/}" class="navbar-brand"><img src="../img/logo.png" alt="logo" width="100" height="100"/></a>
     <button
             class="navbar-toggler"
             data-toggle="collapse"
@@ -106,7 +106,7 @@
                                     th:field="*{descricao}"
                                     cols="4"
                                     rows="3"
-                                    placeholder="Informe o texto"
+                                    placeholder="Informe a descrição da refeição"
                             ></textarea>
                         </div>
                     </div>
@@ -142,11 +142,11 @@
                     <div class="form-group row">
                         <div class="col-md-2">
                             <label>Foto da refeição</label>
-                            <img id="blah" alt="Sua imagem" width="300" height="200" />
+                            <img id="foto" alt="Sua imagem" width="300" height="200" />
                             <input type="file"
                                    id="pic"
                                    th:field="*{pic}"
-                                   onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                                   onchange="document.getElementById('foto').src = window.URL.createObjectURL(this.files[0])">
                         </div>
                     </div>
                 </fieldset>
